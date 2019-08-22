@@ -1,4 +1,4 @@
-# Pipeline Example
+# Machine learning pipeline example
 
 Machine learning pipeline challenge.
 
@@ -11,6 +11,8 @@ The Challenge consists on the following:
 > 3.- Create a 3rd Docker container with a 2nd Database for storing results from our model.
 
 The dataset chosen was the classic [titanic dataset](https://www.kaggle.com/c/titanic/data) and we are going to create a pipeline for a classification solution.
+
+**The steps taken for the training and testing, feature engineering, feature selection, model selection, validation and so on... are on the jupyter notebook: `prod/titanic_example.ipynb`**
 
 I am using PostgreSql for the DBs, python3.5, Docker and a bunch of libraries specified in the requirements.txt inside the folder `prod`, but to test the system you only need docker... and the files from this repo.
 
