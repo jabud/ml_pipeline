@@ -23,15 +23,11 @@ I am using PostgreSql for the DBs, python3.5, Docker and a bunch of libraries sp
 
 BUILD container 1:
 
-`cd database`
-
-`docker build --rm=true -t jfreek/postgresql:1 .`
+`docker build --rm=true -t jfreek/postgresql:1 database/.`
 
 BUILD container 2:
 
-`cd results`
-
-`docker build --rm=true -t jfreek/postgresql:2 .`
+`docker build --rm=true -t jfreek/postgresql:2 results/.`
 
 RUN DBs:
 
@@ -44,10 +40,8 @@ RUN DBs:
 
 Build and run Container for our Production code:
 
-`cd prod`
-
 Build:
-`docker build -t mlpipeline:1 .`
+`docker build -t mlpipeline:1 prod/.`
 
 Run:
 `docker run --rm --network=host -it mlpipeline:1 /bin/bash -c "python pipeline.py"`
