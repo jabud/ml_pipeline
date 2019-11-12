@@ -12,7 +12,7 @@ The Challenge consists on the following:
 
 The dataset chosen was the classic [titanic dataset](https://www.kaggle.com/c/titanic/data) and we are going to create a pipeline for a classification solution.
 
-**The steps taken for the training and testing, feature engineering, feature selection, model selection, validation and so on... are in the jupyter notebook: [`prod/titanic_example.ipynb`](https://github.com/jfreek/ml_pipeline/blob/master/prod/titanic_example.html)**
+**The steps taken for the training and testing, feature engineering, feature selection, model selection, validation and so on... are in the jupyter notebook: [`prod/titanic_example.ipynb`](https://www.jabud.tech/ml_pipeline/prod/titanic_example.html)**
 
 I am using PostgreSql for the DBs, python3.5, Docker and a bunch of libraries specified in the requirements.txt inside the folder `prod`, but to test the system you only need docker... and the files from this repo.
 
