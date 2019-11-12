@@ -13077,34 +13077,36 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Machine-learning-exercise">Machine learning exercise<a class="anchor-link" href="#Machine-learning-exercise">&#182;</a></h1><h1 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h1><h2 id="Exploring">Exploring<a class="anchor-link" href="#Exploring">&#182;</a></h2><ul>
+<h1 id="Machine-learning-exercise">Machine learning exercise<a class="anchor-link" href="#Machine-learning-exercise">&#182;</a></h1><h1 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h1><h2 id="Exploring"><a href="#exploration">Exploring</a><a class="anchor-link" href="#Exploring">&#182;</a></h2><ul>
 <li>Description</li>
 <li>Missing values</li>
 <li>Check distribution</li>
 </ul>
-<h2 id="Cleaning">Cleaning<a class="anchor-link" href="#Cleaning">&#182;</a></h2><ul>
-<li>Filling missing values from <code>Age</code>, <code>Cabin</code> and <code>Embarked</code></li>
-</ul>
-<h2 id="Feature-Engineering">Feature Engineering<a class="anchor-link" href="#Feature-Engineering">&#182;</a></h2><ul>
-<li>New feature combining <code>SibSp</code> and <code>Parch</code>: <code>fam_size</code>.</li>
+<h2 id="Cleansing-and-Feature-Engineering"><a href="#cleansingandfeatureeng">Cleansing and Feature Engineering</a><a class="anchor-link" href="#Cleansing-and-Feature-Engineering">&#182;</a></h2><ul>
+<li><p>Filling missing values from <code>Age</code>, <code>Cabin</code> and <code>Embarked</code></p>
+</li>
+<li><p>New feature combining <code>SibSp</code> and <code>Parch</code>: <code>fam_size</code>.</p>
+</li>
 <li>Extract a new feature: <code>Title</code>. Which would give us some information about the person.</li>
+</ul>
+<h2 id="Encoding"><a href="#encoding">Encoding</a><a class="anchor-link" href="#Encoding">&#182;</a></h2><ul>
 <li>Encoding: <code>Title</code>, <code>Embarked</code> and <code>Sex</code>.</li>
 </ul>
-<h2 id="Feature-Selection">Feature Selection<a class="anchor-link" href="#Feature-Selection">&#182;</a></h2><ul>
+<h2 id="Feature-Selection"><a href="#featuresel">Feature Selection</a><a class="anchor-link" href="#Feature-Selection">&#182;</a></h2><ul>
 <li>Dropping <code>Cabin</code>, <code>PassengerId</code>, <code>Name</code> and <code>Ticket</code></li>
 <li>Check correlations</li>
 </ul>
-<h2 id="Modeling-Baseline">Modeling Baseline<a class="anchor-link" href="#Modeling-Baseline">&#182;</a></h2><ul>
+<h2 id="Modeling-Baseline"><a href="#models">Modeling Baseline</a><a class="anchor-link" href="#Modeling-Baseline">&#182;</a></h2><ul>
 <li>Random forest</li>
 <li>Logistic regression</li>
 <li>Naive bayes</li>
 <li>SVM</li>
 <li>Compare models</li>
 </ul>
-<h2 id="Bias-Variance-Balance">Bias-Variance Balance<a class="anchor-link" href="#Bias-Variance-Balance">&#182;</a></h2><ul>
+<h2 id="Bias-Variance-Balance"><a href="#balance">Bias-Variance Balance</a><a class="anchor-link" href="#Bias-Variance-Balance">&#182;</a></h2><ul>
 <li>Train vs test and confusion matrix: first 2 best models</li>
 </ul>
-<h2 id="Attacking-identified-variance-problem:">Attacking identified variance problem:<a class="anchor-link" href="#Attacking-identified-variance-problem:">&#182;</a></h2><ul>
+<h2 id="Attacking-identified-variance-problem:"><a href="#attack">Attacking identified variance problem:</a><a class="anchor-link" href="#Attacking-identified-variance-problem:">&#182;</a></h2><ul>
 <li>Dropping features</li>
 <li>Check feature importance</li>
 <li>Drop more features</li>
@@ -13116,14 +13118,14 @@ div#notebook {
 <li>Re-train with best estimator and chosen features and check for the last time.</li>
 <li>Fit our estimator</li>
 </ul>
-<h3 id="Save-model-and-Next-steps">Save model and Next steps<a class="anchor-link" href="#Save-model-and-Next-steps">&#182;</a></h3>
+<h3 id="Save-model-and-Next-steps"><a href="#end">Save model and Next steps</a><a class="anchor-link" href="#Save-model-and-Next-steps">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Explore-data">Explore data<a class="anchor-link" href="#Explore-data">&#182;</a></h2>
+<h2 id="Explore-data-">Explore data <a id="exploration" /><a class="anchor-link" href="#Explore-data-">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13583,7 +13585,7 @@ memory usage: 83.6+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Cleansing-and-Feature-Engineering">Cleansing and Feature Engineering<a class="anchor-link" href="#Cleansing-and-Feature-Engineering">&#182;</a></h1><p>The first thing to know is that we have (obviously) a classification problem.
+<h1 id="Cleansing-and-Feature-Engineering">Cleansing and Feature Engineering<a id="cleansingandfeatureeng" /><a class="anchor-link" href="#Cleansing-and-Feature-Engineering">&#182;</a></h1><p>The first thing to know is that we have (obviously) a classification problem.
 The steps I think we need to take are the following:</p>
 <ul>
 <li>We need to deal with missing values from <code>Age</code>, <code>Cabin</code> and <code>Embarked</code></li>
@@ -14609,7 +14611,7 @@ Name: age_group, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Features-to-Numbers">Features to Numbers<a class="anchor-link" href="#Features-to-Numbers">&#182;</a></h2><p>We have to transform: <code>Title</code>, <code>Embarked</code>, <code>Cabin</code> and <code>Sex</code>.
+<h1 id="Encoding">Encoding<a id="encoding" /><a class="anchor-link" href="#Encoding">&#182;</a></h1><p>We have to transform: <code>Title</code>, <code>Embarked</code>, <code>Cabin</code> and <code>Sex</code>.
 I think it would be a good idea to do the following:</p>
 <ul>
 <li><p><code>Embarked</code>: One-hot encoding, 3 categories</p>
@@ -14747,7 +14749,7 @@ Name: title_label, dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feature-Selection">Feature Selection<a class="anchor-link" href="#Feature-Selection">&#182;</a></h1><p>I'll start by selecting empirically</p>
+<h1 id="Feature-Selection">Feature Selection<a id="featuresel" /><a class="anchor-link" href="#Feature-Selection">&#182;</a></h1><p>I'll start by selecting empirically</p>
 <ul>
 <li>Some features I really don't see how they would help like <code>Cabin</code>, <code>PassengerId</code>, <code>Name</code> and <code>Ticket</code></li>
 </ul>
@@ -15208,7 +15210,7 @@ Name: title_label, dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="First-attempts:-Baseline-models">First attempts: Baseline models<a class="anchor-link" href="#First-attempts:-Baseline-models">&#182;</a></h2><p>I think we can try and build some models using these features and check the results</p>
+<h1 id="Baseline-models">Baseline models<a id="models" /><a class="anchor-link" href="#Baseline-models">&#182;</a></h1><p>I think we can try and build some models using these features and check the results</p>
 
 </div>
 </div>
@@ -15542,7 +15544,7 @@ Standard Deviation: 0.05520957241106971
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Bias-Variance-Balance">Bias-Variance Balance<a class="anchor-link" href="#Bias-Variance-Balance">&#182;</a></h2><p>Now I want to know where I am in the bias-variance balance, even though we have good models if we want to improve accuracy we need to know first where we are so we know where we are going (how to improve).</p>
+<h1 id="Bias-Variance-Balance">Bias-Variance Balance<a id="balance" /><a class="anchor-link" href="#Bias-Variance-Balance">&#182;</a></h1><p>Now I want to know where I am in the bias-variance balance, even though we have good models if we want to improve accuracy we need to know first where we are so we know where we are going (how to improve).</p>
 <p>For classification we can use a confusion matrix. I'll do it for the first 2 best models</p>
 
 </div>
@@ -15891,6 +15893,13 @@ Test recall: 0.7399159663865547
 <p>On the case of Naive Bayes since the error difference between the scores is not much we can say we don't have a lot of variance, it seems to be more of a <strong>bias</strong> problem or some <strong>noise</strong>.</p>
 <p>This indicates that we may need to work more on our features to make them more significant or add new ones.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Attacking-the-problem">Attacking the problem<a id="attack" /><a class="anchor-link" href="#Attacking-the-problem">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -16939,7 +16948,7 @@ Test recall: 0.7222689075630251
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="NEXT-STEPS">NEXT STEPS<a class="anchor-link" href="#NEXT-STEPS">&#182;</a></h2><p>I have reduced the varience significantly but it seems we still have some overfitting and we could also benefit if we increase our model performance in general.</p>
+<h2 id="NEXT-STEPS">NEXT STEPS<a id="end" /><a class="anchor-link" href="#NEXT-STEPS">&#182;</a></h2><p>I have reduced the varience significantly but it seems we still have some overfitting and we could also benefit if we increase our model performance in general.</p>
 <ul>
 <li>Deal with imbalanced data: I would suggest re-sampling the data with a synthetic method (SMOTE). (For RF model)</li>
 <li>Try with Naive bayes model, improve performance.</li>
