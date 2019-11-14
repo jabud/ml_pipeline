@@ -1,3 +1,8 @@
+---
+layout: page
+title: "ml_pipeline"
+---
+
 # Machine learning pipeline example
 
 Machine learning pipeline challenge.
